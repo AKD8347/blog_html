@@ -24,6 +24,7 @@ a:hover, a:focus, a:visited {
   font-family: "Inter Bold";
   src: local("Inter"), url("/fonts/Inter/Inter-Bold.ttf") format("ttf");
 }
+/*--Header--*/
 .header {
   display: flex;
   flex-wrap: wrap;
@@ -37,6 +38,14 @@ a:hover, a:focus, a:visited {
   padding-bottom: 25px;
   box-sizing: border-box;
 }
+@media screen and (max-width: 1024px) {
+  .header {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+  }
+}
 .header__container {
   display: flex;
   flex-wrap: wrap;
@@ -45,9 +54,14 @@ a:hover, a:focus, a:visited {
   align-items: center;
   width: 1152px;
 }
-@media (max-width: 1151px) {
-  .header .header__container {
+@media screen and (max-width: 1151px) {
+  .header__container {
     width: 100%;
+  }
+}
+@media screen and (max-width: 765px) {
+  .header__container {
+    flex-direction: column;
   }
 }
 .header__logo {
@@ -60,6 +74,11 @@ a:hover, a:focus, a:visited {
 .header__logo:hover, .header__logo:focus, .header__logo:active {
   color: #000000;
 }
+@media screen and (max-width: 765px) {
+  .header__logo {
+    margin-bottom: 15px;
+  }
+}
 .header__search {
   display: flex;
   flex-wrap: wrap;
@@ -67,6 +86,12 @@ a:hover, a:focus, a:visited {
   justify-content: space-between;
   align-items: center;
   margin-left: 90px;
+}
+@media screen and (max-width: 765px) {
+  .header__search {
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
 }
 .header__search-icon {
   display: block;
@@ -134,26 +159,29 @@ a:hover, a:focus, a:visited {
   background-image: url("/img/icons/in_icon.svg");
 }
 
-@media (max-width: 1024px) {
-  .header {
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 15px;
+/*--Close Header--*/
+/*--Main section--*/
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.main__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1152px;
+}
+@media screen and (max-width: 1151px) {
+  .main__container {
+    width: 100%;
   }
 }
-@media (max-width: 765px) {
-  .header__container {
-    flex-direction: column;
-  }
-  .header__logo {
-    margin-bottom: 15px;
-  }
-  .header__search {
-    margin-left: 0;
-    margin-bottom: 15px;
-    text-align: center;
-  }
-}
+
+/*--Close Main section--*/
 
 /*# sourceMappingURL=styles.css.map */
