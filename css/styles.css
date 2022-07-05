@@ -366,6 +366,21 @@ a:hover, a:focus, a:visited {
   height: 100%;
   object-fit: contain;
 }
+.main__box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 297px);
+  gap: 34px 25px;
+  justify-content: space-between;
+  width: 100%;
+}
+.main__box-item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 297px;
+}
 
 /*--Close Main section--*/
 

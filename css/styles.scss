@@ -395,6 +395,23 @@ $InterBold: "Inter Bold", sans-serif;
       object-fit: contain;
     }
   }
+
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 297px);
+    gap: 34px 25px;
+    justify-content: space-between;
+    width: 100%;
+
+    &-item{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      width: 297px;
+    }
+  }
 }
 
 /*--Close Main section--*/
