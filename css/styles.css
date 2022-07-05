@@ -33,7 +33,7 @@ a:hover, a:focus, a:visited {
   background-color: #fff;
   padding-top: 36px;
   padding-left: 83px;
-  padding-right: 83px;
+  padding-right: 96px;
   padding-bottom: 25px;
   box-sizing: border-box;
 }
@@ -43,9 +43,9 @@ a:hover, a:focus, a:visited {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 1280px;
+  width: 1152px;
 }
-@media (max-width: 1279px) {
+@media (max-width: 1151px) {
   .header .header__container {
     width: 100%;
   }
@@ -66,6 +66,7 @@ a:hover, a:focus, a:visited {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-left: 90px;
 }
 .header__search-icon {
   display: block;
@@ -107,24 +108,52 @@ a:hover, a:focus, a:visited {
 .header__nav li {
   margin: 0 15px;
 }
-.header__nav li a {
+.header__nav li .header__nav-item {
   position: relative;
   font-family: "Inter Regular", sans-serif;
   font-size: 16px;
   color: #000000;
 }
-.header__nav li a:after {
+.header__nav .header__nav-icon {
   display: block;
-  position: absolute;
-  content: "";
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color: #000;
-  transition: all 0.4s;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  background-position: 0 0;
 }
-.header__nav li a:hover:after {
-  width: 99%;
+.header__nav .header__nav-icon--inst {
+  background-image: url("/img/icons/inst_icon.svg");
+}
+.header__nav .header__nav-icon--tw {
+  background-image: url("/img/icons/tw_icon.svg");
+}
+.header__nav .header__nav-icon--in {
+  background-image: url("/img/icons/in_icon.svg");
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+  }
+}
+@media (max-width: 765px) {
+  .header__container {
+    flex-direction: column;
+  }
+  .header__logo {
+    margin-bottom: 15px;
+  }
+  .header__search {
+    margin-left: 0;
+    margin-bottom: 15px;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
