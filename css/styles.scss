@@ -33,7 +33,6 @@ $InterRegular: "Inter Regular", sans-serif;
 $InterBold: "Inter Bold", sans-serif;
 
 /*--Header--*/
-
 .header {
   display: flex;
   flex-wrap: wrap;
@@ -41,17 +40,11 @@ $InterBold: "Inter Bold", sans-serif;
   justify-content: center;
   width: 100%;
   background-color: #fff;
-  padding-top: 36px;
-  padding-left: 83px;
-  padding-right: 96px;
-  padding-bottom: 25px;
+  padding: 36px 96px 25px 83px;
   box-sizing: border-box;
 
   @media screen and (max-width: 1024px) {
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 15px;
+    padding: 10px 10px 15px;
   }
 
   &__container {
@@ -99,31 +92,31 @@ $InterBold: "Inter Bold", sans-serif;
       margin-left: 0;
       margin-bottom: 15px;
     }
-  }
 
-  &__search-icon {
-    display: block;
-    position: relative;
-    width: 18px;
-    height: 17px;
-    background-image: url('/img/icons/search_icon.svg');
-    background-repeat: no-repeat;
-    -webkit-background-size: 100%;
-    background-size: 100%;
-    background-position: 0 0;
-  }
+    &-icon{
+      display: block;
+      position: relative;
+      width: 18px;
+      height: 17px;
+      background-image: url('/img/icons/search_icon.svg');
+      background-repeat: no-repeat;
+      -webkit-background-size: 100%;
+      background-size: 100%;
+      background-position: 0 0;
+    }
 
-  &__search-field {
-    border-color: transparent;
-    font-family: $InterRegular;
-    font-size: 17px;
-    color: #718096;
-    margin: 0;
-    padding-top: 3px;
-    padding-left: 9px;
+    &-field {
+      border-color: transparent;
+      font-family: $InterRegular;
+      font-size: 17px;
+      color: #718096;
+      margin: 0;
+      padding-top: 3px;
+      padding-left: 9px;
 
-    &:focus {
-      outline: none;
+      &:focus {
+        outline: none;
+      }
     }
   }
 
@@ -150,24 +143,6 @@ $InterBold: "Inter Bold", sans-serif;
         font-family: $InterRegular;
         font-size: 16px;
         color: #000000;
-
-        //&:after {
-        //  display: block;
-        //  position: absolute;
-        //  content: "";
-        //  left: 0;
-        //  width: 0;
-        //  height: 1px;
-        //  background-color: #000;
-        //  transition: all 0.4s;
-        //}
-        //
-        //&:hover {
-        //
-        //  &:after {
-        //    width: 99%;
-        //  }
-        //}
       }
     }
 
@@ -195,6 +170,7 @@ $InterBold: "Inter Bold", sans-serif;
     }
   }
 }
+
 /*--Close Header--*/
 
 /*--Main section--*/
@@ -213,8 +189,77 @@ $InterBold: "Inter Bold", sans-serif;
     width: 100%;
     background-color: #FBFBFB;
     padding-top: 70px;
-    padding-top: 74px;
+    padding-bottom: 74px;
     box-sizing: border-box;
+
+    &-slogan {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      width: 50%;
+
+      @media screen and (max-width: 776px) {
+        width: 100%;
+      }
+    }
+
+    &-title {
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      width: 100%;
+      margin: 0;
+      font-family: $InterBold;
+      font-size: 62px;
+      color: #000000;
+      padding-left: 30px;
+      box-sizing: border-box;
+
+      &:after {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 87px;
+        height: 85px;
+        background-image: url('/img/icons/cofee_icon.svg');
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+        background-position: 0 0;
+        bottom: 0;
+        left: 223px;
+      }
+    }
+
+    &-subtitle {
+      width: 100%;
+      margin-top: 14px;
+      font-family: $InterRegular;
+      font-size: 30px;
+      color: #4A5568;
+      padding-left: 30px;
+      box-sizing: border-box;
+    }
+
+    &-photo {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: end;
+      width: 50%;
+      height: 323px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      @media screen and (max-width: 772px) {
+        display: none;
+      }
+    }
   }
 
   &__container {
@@ -226,78 +271,86 @@ $InterBold: "Inter Bold", sans-serif;
     width: 1152px;
 
     @media screen and (max-width: 1151px) {
-        width: 100%;
-    }
-  }
-
-  &__banner-slogan{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 50%;
-
-    @media screen and (max-width: 1024px) {
       width: 100%;
     }
   }
 
-  &__banner-title {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    width: 100%;
-    margin: 0;
-    font-family: $InterBold;
-    font-size: 62px;
-    color: #000000;
-    padding-left: 30px;
-    box-sizing: border-box;
-
-    &:after {
-      display: block;
-      position: absolute;
-      content: '';
-      width: 87px;
-      height: 85px;
-      background-image: url('/img/icons/cofee_icon.svg');
-      background-repeat: no-repeat;
-      -webkit-background-size: contain;
-      background-size: contain;
-      background-position: 0 0;
-      bottom: 0;
-      left: 223px;
-    }
-  }
-
-  &__banner-photo{
+  &__news {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: end;
-    width: 50%;
-    height: 323px;
-    padding-right: 30px;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    padding-top: 39px;
+    box-sizing: border-box;
+  }
+
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid #E2E2E2;
+    box-shadow: 0 5px 4px rgba(221, 221, 221, 0.25);
+    border-radius: 5px;
+  }
+
+  &__descr {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    width: calc(100% - 433px);
+    padding: 41px 74px 43px 54px;
     box-sizing: border-box;
 
-    img{
+    &-title {
+      display: -webkit-box;
+      width: 100%;
+      overflow: hidden;
+      margin-top: 0;
+      margin-bottom: 27px;
+      font-family: $InterBold;
+      font-size: 30px;
+      color: #2D3748;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      line-height: 1.1;
+      height: calc(30px * 1 * 1.1);
+    }
+
+    &-about {
+      display: -webkit-box;
+      width: 100%;
+      overflow: hidden;
+      margin-top: 0;
+      margin-bottom: 30px;
+      font-family: $InterRegular;
+      font-size: 15px;
+      line-height: 1.1;
+      color: #718096;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      height: calc(15px * 3 * 1.1);
+    }
+  }
+
+  &__photo {
+    display: block;
+    position: relative;
+    width: 433px;
+    height: 243px;
+    overflow: hidden;
+
+    img {
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
-
-    @media screen and (max-width: 1024px) {
-      width: 100%;
-    }
-  }
-
-  &__banner-subtitle{
-    width: 100%;
-    margin-top: 14px;
-    font-family: $InterRegular;
-    font-size: 30px;
-    color: #4A5568;
-    padding-left: 30px;
-    box-sizing: border-box;
   }
 }
+
 /*--Close Main section--*/
