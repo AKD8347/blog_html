@@ -52,6 +52,7 @@ $Inter: 'Inter', sans-serif;
     justify-content: space-between;
     align-items: center;
     width: 968px;
+    position: relative;
 
     @media screen and (max-width: 967px) {
       width: 100%;
@@ -137,16 +138,38 @@ $Inter: 'Inter', sans-serif;
     li {
       margin: 0 15px;
 
-      .header__nav-item {
-        position: relative;
-        font-family: $Inter;
-        font-weight: 400;
-        font-size: 16px;
-        color: #000000;
+      &:last-of-type {
+        margin-right: 0;
       }
     }
 
-    .header__nav-icon {
+    &-item {
+      position: relative;
+      font-family: $Inter;
+      font-weight: 400;
+      font-size: 16px;
+      color: #000000;
+
+      &:after{
+        display: block;
+        position: absolute;
+        content: '';
+        bottom: -3px;
+        width: 0;
+        height: 2px;
+        background-color: #000000;
+        transition: all 0.4s;
+      }
+
+      &:hover {
+
+        &:after {
+          width: 85%;
+        }
+      }
+    }
+
+    &-icon {
       display: block;
       position: relative;
       width: 20px;
@@ -268,9 +291,10 @@ $Inter: 'Inter', sans-serif;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 968px;
+    position: relative;
 
     @media screen and (max-width: 967px) {
       width: 100%;
@@ -377,8 +401,22 @@ $Inter: 'Inter', sans-serif;
       color: #2D3748;
       transition: all 0.4s;
 
+      &:after{
+        display: block;
+        position: absolute;
+        content: '';
+        bottom: -3px;
+        width: 0;
+        height: 2px;
+        background-color: #000000;
+        transition: all 0.4s;
+      }
+
       &:hover {
-        color: #718096;
+
+        &:after {
+          width: 85%;
+        }
       }
     }
   }
@@ -558,8 +596,22 @@ $Inter: 'Inter', sans-serif;
       color: #2D3748;
       transition: all 0.4s;
 
+      &:after{
+        display: block;
+        position: absolute;
+        content: '';
+        bottom: -3px;
+        width: 0;
+        height: 2px;
+        background-color: #000000;
+        transition: all 0.4s;
+      }
+
       &:hover {
-        color: #718096;
+
+        &:after {
+          width: 85%;
+        }
       }
     }
 
@@ -627,7 +679,144 @@ $Inter: 'Inter', sans-serif;
   }
 }
 /*--Close Main page--*/
+/*--Article--*/
+.article {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 58px;
+  box-sizing: border-box;
 
+  &__banner {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    max-height: 380px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: relative;
+    width: 768px;
+    padding-top: 41px;
+    box-sizing: border-box;
+
+    @media screen and(max-width: 768px) {
+      width: 100%;
+      padding: 30px 20px;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 19px;
+    font-family: $Inter;
+    font-weight: 700;
+    font-size: 45px;
+    color: #2D3748;
+    width: 100%;
+    text-align: left;
+  }
+
+  &__author {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 36px;
+    font-family: $Inter;
+    font-weight: 700;
+    font-size: 18px;
+    color: #2D3748;
+  }
+
+  &__date{
+    display: block;
+    position: relative;
+    font-family: $Inter;
+    font-weight: 400;
+    font-size: 18px;
+    color: #718096;
+  }
+
+  &__line {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: #E8E7E7;
+    margin-top: 30px;
+    margin-bottom: 36px;
+  }
+
+  &__about {
+    margin-top: 0;
+    font-family: $Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #718096;
+
+    &-subtitle {
+      margin-top: 0;
+      font-family: $Inter;
+      font-weight: 700;
+      font-style: italic;
+      color: #2D3748;
+    }
+
+    &-title {
+      margin-top: 10px;
+      margin-bottom: 26px;
+      font-family: $Inter;
+      font-weight: 700;
+      font-size: 30px;
+      color: #2D3748;
+    }
+  }
+
+  &__up {
+    display: block;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    right: -21px;
+    bottom: 0;
+    overflow: hidden;
+    border-radius: 50%;
+    background-image: url('../img/icons/up_icon.svg');
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    border: none;
+    box-shadow: transparent;
+    transition: all 0.4s;
+    cursor: pointer;
+
+    &:hover {
+      -webkit-box-shadow: 1px 0 14px 3px rgba(102,43,197,0.81);
+      box-shadow: 1px 0 14px 3px rgba(102,43,197,0.81);
+    }
+
+    @media screen and(max-width: 768px) {
+      right: 20px;
+      bottom: 0;
+    }
+  }
+}
+/*--Close Article--*/
 /*--Footer--*/
 .footer {
   display: flex;
@@ -648,6 +837,7 @@ $Inter: 'Inter', sans-serif;
     justify-content: space-between;
     align-items: center;
     width: 968px;
+    position: relative;
 
     @media screen and (max-width: 967px) {
       width: 100%;
