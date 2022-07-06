@@ -17,21 +17,19 @@ a {
   }
 }
 
+//@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 @font-face {
-  font-family: 'Inter Regular';
-  src: local('Inter'),
-  url('../fonts/Inter/Inter-Regular.ttf') format('ttf');
+  font-family: Inter;
+  src: url('../fonts/Inter/Inter-Regular.ttf') format('ttf');
 }
 
 @font-face {
-  font-family: 'Inter Bold';
-  src: local('Inter'),
-  url('../fonts/Inter/Inter-Bold.ttf') format('ttf');
+  font-family: Inter;
+  src: url('../fonts/Inter/Inter-Bold.ttf') format('ttf');
 }
 
-$InterRegular: "Inter Regular", sans-serif;
-$InterBold: "Inter Bold", sans-serif;
-
+$Inter: 'Inter', sans-serif;
 /*--Header--*/
 .header {
   display: flex;
@@ -65,7 +63,7 @@ $InterBold: "Inter Bold", sans-serif;
   }
 
   &__logo {
-    font-family: $InterBold;
+    font-family: $Inter;
     font-weight: 700;
     font-size: 21px;
     color: #000;
@@ -107,7 +105,8 @@ $InterBold: "Inter Bold", sans-serif;
 
     &-field {
       border-color: transparent;
-      font-family: $InterRegular;
+      font-family: $Inter;
+      font-weight: 400;
       font-size: 17px;
       color: #718096;
       margin: 0;
@@ -140,7 +139,8 @@ $InterBold: "Inter Bold", sans-serif;
 
       .header__nav-item {
         position: relative;
-        font-family: $InterRegular;
+        font-family: $Inter;
+        font-weight: 400;
         font-size: 16px;
         color: #000000;
       }
@@ -209,7 +209,8 @@ $InterBold: "Inter Bold", sans-serif;
       position: relative;
       width: 100%;
       margin: 0;
-      font-family: $InterBold;
+      font-family: $Inter;
+      font-weight: 700;
       font-size: 62px;
       color: #000000;
       padding-left: 30px;
@@ -234,7 +235,8 @@ $InterBold: "Inter Bold", sans-serif;
     &-subtitle {
       width: 100%;
       margin-top: 14px;
-      font-family: $InterRegular;
+      font-family: $Inter;
+      font-weight: 400;
       font-size: 30px;
       color: #4A5568;
       padding-left: 30px;
@@ -319,7 +321,8 @@ $InterBold: "Inter Bold", sans-serif;
       overflow: hidden;
       margin-top: 0;
       margin-bottom: 27px;
-      font-family: $InterBold;
+      font-family: $Inter;
+      font-weight: 700;
       font-size: 30px;
       color: #2D3748;
       -webkit-line-clamp: 1;
@@ -340,7 +343,8 @@ $InterBold: "Inter Bold", sans-serif;
       overflow: hidden;
       margin-top: 0;
       margin-bottom: 30px;
-      font-family: $InterRegular;
+      font-family: $Inter;
+      font-weight: 400;
       font-size: 15px;
       line-height: 1.1;
       color: #718096;
@@ -358,7 +362,8 @@ $InterBold: "Inter Bold", sans-serif;
     &-date {
       display: block;
       position: relative;
-      font-family: $InterRegular;
+      font-family: $Inter;
+      font-weight: 400;
       font-size: 12px;
       color: #718096;
     }
@@ -366,7 +371,8 @@ $InterBold: "Inter Bold", sans-serif;
     &-more {
       display: block;
       position: relative;
-      font-family: $InterBold;
+      font-family: $Inter;
+      font-weight: 700;
       font-size: 12px;
       color: #2D3748;
       transition: all 0.4s;
@@ -450,7 +456,8 @@ $InterBold: "Inter Bold", sans-serif;
       display: -webkit-box;
       margin: 0;
       overflow: hidden;
-      font-family: $InterBold;
+      font-family: $Inter;
+      font-weight: 700;
       font-size: 20px;
       line-height: 1.1;
       color: #2D3748;
@@ -464,7 +471,8 @@ $InterBold: "Inter Bold", sans-serif;
       display: -webkit-box;
       margin: 0;
       overflow: hidden;
-      font-family: $InterRegular;
+      font-family: $Inter;
+      font-weight: 400;
       font-size: 14px;
       line-height: 1.15;
       color: #718096;
@@ -517,7 +525,8 @@ $InterBold: "Inter Bold", sans-serif;
     &-title {
       margin-top: 0;
       margin-bottom: 24px;
-      font-family: $InterBold;
+      font-family: $Inter;
+      font-weight: 700;
       font-size: 40px;
       color: #000000;
     }
@@ -525,7 +534,8 @@ $InterBold: "Inter Bold", sans-serif;
     &-about {
       margin-top: 0;
       margin-bottom: 31px;
-      font-family: $InterRegular;
+      font-family: $Inter;
+      font-weight: 400;
       font-size: 16px;
       color: #718096;
     }
@@ -533,7 +543,8 @@ $InterBold: "Inter Bold", sans-serif;
     &-date {
       display: block;
       position: relative;
-      font-family: $InterRegular;
+      font-family: $Inter;
+      font-weight: 400;
       font-size: 16px;
       color: #4A5568;
     }
@@ -541,7 +552,8 @@ $InterBold: "Inter Bold", sans-serif;
     &-more {
       display: block;
       position: relative;
-      font-family: $InterBold;
+      font-family: $Inter;
+      font-weight: 700;
       font-size: 16px;
       color: #2D3748;
       transition: all 0.4s;
@@ -643,6 +655,19 @@ $InterBold: "Inter Bold", sans-serif;
 
     @media screen and (max-width: 765px) {
       flex-direction: column;
+    }
+  }
+
+  &__art {
+    font-family: $Inter;
+    font-weight: 400;
+    margin: 0;
+    font-size: 16px;
+    color: #000000;
+
+    span {
+      font-family: $Inter;
+      font-weight: 700;
     }
   }
 }

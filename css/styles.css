@@ -17,12 +17,12 @@ a:hover, a:focus, a:visited {
 }
 
 @font-face {
-  font-family: "Inter Regular";
-  src: local("Inter"), url("../fonts/Inter/Inter-Regular.ttf") format("ttf");
+  font-family: Inter;
+  src: url("../fonts/Inter/Inter-Regular.ttf") format("ttf");
 }
 @font-face {
-  font-family: "Inter Bold";
-  src: local("Inter"), url("../fonts/Inter/Inter-Bold.ttf") format("ttf");
+  font-family: Inter;
+  src: url("../fonts/Inter/Inter-Bold.ttf") format("ttf");
 }
 /*--Header--*/
 .header {
@@ -59,7 +59,7 @@ a:hover, a:focus, a:visited {
   }
 }
 .header__logo {
-  font-family: "Inter Bold", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 21px;
   color: #000;
@@ -100,7 +100,8 @@ a:hover, a:focus, a:visited {
 }
 .header__search-field {
   border-color: transparent;
-  font-family: "Inter Regular", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
   font-size: 17px;
   color: #718096;
   margin: 0;
@@ -129,7 +130,8 @@ a:hover, a:focus, a:visited {
 }
 .header__nav li .header__nav-item {
   position: relative;
-  font-family: "Inter Regular", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   color: #000000;
 }
@@ -190,7 +192,8 @@ a:hover, a:focus, a:visited {
   position: relative;
   width: 100%;
   margin: 0;
-  font-family: "Inter Bold", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
   font-size: 62px;
   color: #000000;
   padding-left: 30px;
@@ -213,7 +216,8 @@ a:hover, a:focus, a:visited {
 .main__banner-subtitle {
   width: 100%;
   margin-top: 14px;
-  font-family: "Inter Regular", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
   font-size: 30px;
   color: #4A5568;
   padding-left: 30px;
@@ -294,7 +298,8 @@ a:hover, a:focus, a:visited {
   overflow: hidden;
   margin-top: 0;
   margin-bottom: 27px;
-  font-family: "Inter Bold", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
   font-size: 30px;
   color: #2D3748;
   -webkit-line-clamp: 1;
@@ -315,7 +320,8 @@ a:hover, a:focus, a:visited {
   overflow: hidden;
   margin-top: 0;
   margin-bottom: 30px;
-  font-family: "Inter Regular", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
   font-size: 15px;
   line-height: 1.1;
   color: #718096;
@@ -333,14 +339,16 @@ a:hover, a:focus, a:visited {
 .main__descr-date {
   display: block;
   position: relative;
-  font-family: "Inter Regular", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
   font-size: 12px;
   color: #718096;
 }
 .main__descr-more {
   display: block;
   position: relative;
-  font-family: "Inter Bold", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
   font-size: 12px;
   color: #2D3748;
   transition: all 0.4s;
@@ -417,7 +425,8 @@ a:hover, a:focus, a:visited {
   display: -webkit-box;
   margin: 0;
   overflow: hidden;
-  font-family: "Inter Bold", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
   font-size: 20px;
   line-height: 1.1;
   color: #2D3748;
@@ -430,7 +439,8 @@ a:hover, a:focus, a:visited {
   display: -webkit-box;
   margin: 0;
   overflow: hidden;
-  font-family: "Inter Regular", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.15;
   color: #718096;
@@ -480,28 +490,32 @@ a:hover, a:focus, a:visited {
 .more__banner-title {
   margin-top: 0;
   margin-bottom: 24px;
-  font-family: "Inter Bold", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
   font-size: 40px;
   color: #000000;
 }
 .more__banner-about {
   margin-top: 0;
   margin-bottom: 31px;
-  font-family: "Inter Regular", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   color: #718096;
 }
 .more__banner-date {
   display: block;
   position: relative;
-  font-family: "Inter Regular", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   color: #4A5568;
 }
 .more__banner-more {
   display: block;
   position: relative;
-  font-family: "Inter Bold", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
   font-size: 16px;
   color: #2D3748;
   transition: all 0.4s;
@@ -598,6 +612,17 @@ a:hover, a:focus, a:visited {
   .footer__container {
     flex-direction: column;
   }
+}
+.footer__art {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  font-size: 16px;
+  color: #000000;
+}
+.footer__art span {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
 }
 
 /*--Close Footer--*/
