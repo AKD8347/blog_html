@@ -20,13 +20,13 @@ a {
 @font-face {
   font-family: 'Inter Regular';
   src: local('Inter'),
-  url('/fonts/Inter/Inter-Regular.ttf') format('ttf');
+  url('../fonts/Inter/Inter-Regular.ttf') format('ttf');
 }
 
 @font-face {
   font-family: 'Inter Bold';
   src: local('Inter'),
-  url('/fonts/Inter/Inter-Bold.ttf') format('ttf');
+  url('../fonts/Inter/Inter-Bold.ttf') format('ttf');
 }
 
 $InterRegular: "Inter Regular", sans-serif;
@@ -53,9 +53,9 @@ $InterBold: "Inter Bold", sans-serif;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 1152px;
+    width: 968px;
 
-    @media screen and (max-width: 1151px) {
+    @media screen and (max-width: 967px) {
       width: 100%;
     }
 
@@ -98,7 +98,7 @@ $InterBold: "Inter Bold", sans-serif;
       position: relative;
       width: 18px;
       height: 17px;
-      background-image: url('/img/icons/search_icon.svg');
+      background-image: url('../img/icons/search_icon.svg');
       background-repeat: no-repeat;
       -webkit-background-size: 100%;
       background-size: 100%;
@@ -157,20 +157,19 @@ $InterBold: "Inter Bold", sans-serif;
       background-position: 0 0;
 
       &--inst {
-        background-image: url('/img/icons/inst_icon.svg');
+        background-image: url('../img/icons/inst_icon.svg');
       }
 
       &--tw {
-        background-image: url('/img/icons/tw_icon.svg');
+        background-image: url('../img/icons/tw_icon.svg');
       }
 
       &--in {
-        background-image: url('/img/icons/in_icon.svg');
+        background-image: url('../img/icons/in_icon.svg');
       }
     }
   }
 }
-
 /*--Close Header--*/
 
 /*--Main section--*/
@@ -221,7 +220,7 @@ $InterBold: "Inter Bold", sans-serif;
         content: '';
         width: 87px;
         height: 85px;
-        background-image: url('/img/icons/cofee_icon.svg');
+        background-image: url('../img/icons/cofee_icon.svg');
         background-repeat: no-repeat;
         -webkit-background-size: contain;
         background-size: contain;
@@ -268,9 +267,9 @@ $InterBold: "Inter Bold", sans-serif;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 1152px;
+    width: 968px;
 
-    @media screen and (max-width: 1151px) {
+    @media screen and (max-width: 967px) {
       width: 100%;
     }
   }
