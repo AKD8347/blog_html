@@ -624,6 +624,43 @@ a:hover, a:focus, a:visited {
   font-family: "Inter", sans-serif;
   font-weight: 700;
 }
+.footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@media screen and (max-width: 769px) {
+  .footer__nav {
+    margin-top: 15px;
+  }
+}
+.footer__nav li {
+  margin: 0 15px;
+}
+.footer__nav .footer__nav-icon {
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  background-position: 0 0;
+}
+.footer__nav .footer__nav-icon--inst {
+  background-image: url("../img/icons/inst_icon.svg");
+}
+.footer__nav .footer__nav-icon--tw {
+  background-image: url("../img/icons/tw_icon.svg");
+}
+.footer__nav .footer__nav-icon--in {
+  background-image: url("../img/icons/in_icon.svg");
+}
 
 /*--Close Footer--*/
 

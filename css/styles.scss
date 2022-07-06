@@ -670,5 +670,47 @@ $Inter: 'Inter', sans-serif;
       font-weight: 700;
     }
   }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @media screen and (max-width: 769px) {
+      margin-top: 15px;
+    }
+
+    li {
+      margin: 0 15px;
+    }
+
+    .footer__nav-icon {
+      display: block;
+      position: relative;
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      -webkit-background-size: 100% 100%;
+      background-size: 100% 100%;
+      background-position: 0 0;
+
+      &--inst {
+        background-image: url('../img/icons/inst_icon.svg');
+      }
+
+      &--tw {
+        background-image: url('../img/icons/tw_icon.svg');
+      }
+
+      &--in {
+        background-image: url('../img/icons/in_icon.svg');
+      }
+    }
+  }
 }
 /*--Close Footer--*/
